@@ -93,5 +93,16 @@ This is a way to verify if an existing number is valid, or generating the VAT nu
 
 Create a new document that associates the company name and company number with the known VAT registration number and create a script to search for a company in that document (matching results despite variations in the company name; the “J Smith Building Services Ltd” and “J. Smith Building Svcs Limited” case)
 
+First I chose to build the script. To collect all the possible variation of the canonical form, I used Claude to create a list with them (e.g. a list for LIMITED consists of: "LTD.", "LIM", "LMTD", "LTED", "LIMTED", "LIMITED"). The script is the search function in search.py file.
 
-- another approach - finding existing invoices
+I found only a website http://www.vat-lookup.co.uk/ that returns the VAT number for the company name, but it is not secure and it doesn't provide an API to bulk check. So in order to use it you have to search for every company name manually and then add the given VAT number on the official HMRC checker and this will took some time. So I'm thinking about something else.
+
+
+### Another approach: Checking existing invoices
+
+As a third company that wants to deliver the missing two thirds that means we might not have access to their invoices. There isn't a public database with these invoices for any company. So I am thinking that we could deliver them a tool to use on their invoices so that it extracts the VAT registration number, check it on HMRC checker and then return the companies that match the company name from HMRC checker. If we would have access to their invoices, then we can use the tool ourselves and then deliver the results to them.
+
+
+### What would I do with unlimited resources
+
+I would've integrate an AI agent in my scripts that would've search on the internet for the VAT registration number for a given company and then I would've test it on HMRC checker, but integrating an AI agent is not available on free plans.
