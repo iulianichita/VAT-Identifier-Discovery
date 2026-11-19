@@ -102,6 +102,10 @@ I found only a website http://www.vat-lookup.co.uk/ that returns the VAT number 
 
 As a third company that wants to deliver the missing two thirds that means we might not have access to their invoices. There isn't a public database with these invoices for any company. So I am thinking that we could deliver them a tool to use on their invoices so that it extracts the VAT registration number, check it on HMRC checker and then return the companies that match the company name from HMRC checker. If we would have access to their invoices, then we can use the tool ourselves and then deliver the results to them.
 
+To test my theory, I generate a sample of invoices that contains the company name, company number and a valid VAT registration number with generateInvoices.py script. I explained every step made from here in the proofOfConcept.py file.
+
+*** Variation: *** We can also try to match the document with the companies data and the invoices by address.
+
 
 ### What would I do with unlimited resources
 
