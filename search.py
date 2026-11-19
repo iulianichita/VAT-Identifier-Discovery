@@ -79,7 +79,7 @@ def search(value): # value can be company name or company number
         return results
 
     
-results = search("\" TRIPLE. D\" PROPERTIES LTD.")
-for companyDetails in results:
-    pp(companyDetails)
-    print()
+# results = search("\" TRIPLE. D\" PROPERTIES LTD.")
+# for companyDetails in results:
+#     pp(companyDetails)
+#     print()
