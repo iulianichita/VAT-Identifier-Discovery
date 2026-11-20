@@ -2,3 +2,4 @@ __pycache__/
 *.pyc
 .vscode/
 /BasicCompanyData-2026-11-01-part1_7
+.env
